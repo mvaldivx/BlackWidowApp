@@ -1,0 +1,106 @@
+@font-face{
+  font-family: 'Quicksand';
+  src: url('../../assets/fonts/Quicksand-Regular.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'Comfortaa';
+  src: url('../../assets/fonts/Comfortaa-Regular.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ComfortaaBold';
+  src: url('../../assets/fonts/Comfortaa-Bold.ttf') format('truetype');
+}
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+ion-toolbar{
+  --background:#2e2d2b;
+  color:white;
+  text-align: center;
+  font-family: Comfortaa;
+}
+
+.content{
+  width:95%;
+  margin:auto;
+  height:95%;
+
+  .articulos{
+    text-align: center;
+  }
+
+  .producto{
+    width:140px;
+    height:205px;
+    display:inline-block;
+    font-family: Quicksand;
+    .imagen{
+      height:160px;
+      img{
+        width:95%;
+        height:95%;
+        margin:auto;
+      }
+    }
+    .colores{
+      width: 65%;
+      display:inline-block;
+      height: 100%;
+      overflow-x: var(--overflow);
+      overflow-y: hidden;
+      .listaColores{
+        height: 100%;
+        width: max-content;
+      }
+      .colors{
+        width:15px;
+        height:15px;
+        border-radius: 50px;
+        margin-left: 5px;
+        display:inline-block;
+        border-style: solid;
+        border-width: .5px;
+        border-color: #999999;
+      }
+    }
+
+    .btnCart{
+      width:35%;
+      display:inline-block;
+      max-height: 100%;
+      ion-button{
+        margin-top: -28px;
+      }
+    }
+    .Nombre{
+      margin-left:5px;
+      height:20px;
+      .Nom{
+        height:100%;
+        width:65%;
+        display:inline-block;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        white-space: nowrap;
+        font-size: 13px;
+      }
+      .precio{
+        width: 50%;
+        display:inline-block;
+        font-size: 13px;
+        vertical-align: super;
+        color:#ff1100;
+        font-family: ComfortaaBold;
+        font-weight: bold;
+      }
+    }
+    .footerProd{
+      height: 13%;
+      margin-top:2px;
+    }
+  }
+
+
+
+}

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      BLACKWIDOW
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <div class="articulos">
+      <ion-card class="producto" *ngFor="let p of Productos">
+        <div class="imagen">
+          <img src="https://i.pinimg.com/474x/75/66/8c/75668cf7347e9b7d1cb508259493c4e4.jpg">
+        </div>
+        <div class="Nombre">
+          <!--<div class="Nom">
+            {{p.Nombre}}
+          </div>-->
+          <div class="precio">
+            $ {{formatText(p.Precio)}}
+          </div></div>
+        <div class="footerProd">
+          <div class="colores">
+            <div class="listaColores">
+              <div *ngFor="let c of p.Colores" class="colors" [ngStyle]="{'background-color':c.Color}"></div>
+            </div>
+          </div>
+          <div class="btnCart">
+            <ion-button fill="clear" size="small" (click)="addCarrito(p)">
+              <ion-icon name="cart"></ion-icon>
+            </ion-button>
+          </div>
+        </div>
+      </ion-card>
+    </div>
+  </div>
+  
+    
+</ion-content>

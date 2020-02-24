@@ -1,0 +1,42 @@
+<ion-content >
+  <div class="contenido">
+    <div class="btnClose">
+        <ion-buttons>
+          <ion-button class="btnClose" (click)="closeModal()">
+              X
+          </ion-button>
+        </ion-buttons>
+      </div>
+      <div class="controles">
+        <div class="colores">
+          <div class="imagen">
+              <!--<img src="https://previews.123rf.com/images/aquir/aquir1311/aquir131100316/23569861-sample-grunge-red-round-stamp.jpg">-->
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiZkANqzR7gLQh1n-QD4WbrKTEnSLnFrEzj15c7DheBQp7wMaq">
+          </div>
+          <div class="insideColors">
+            <div *ngFor="let c of Producto.Colores" class="colors" 
+            (click) = "color =c.Color"
+            [ngClass]="{'selectedColor':color == c.Color}"
+            [ngStyle]="{'background-color':c.Color}"></div>
+          </div>
+        </div>
+        <div class="tallas">
+            <ion-segment class="segmentTallas">
+                <ion-button [ngClass]="{'btnTallasSelected':talla == t.Talla}" (click)="CambioTalla(t.Talla)" 
+                fill="outline" class="btnTallas" *ngFor="let t of Tallas" value="t.Talla">
+                  <ion-label>{{t.Talla}}</ion-label>
+                </ion-button>
+            </ion-segment>
+          </div>
+              <div class="txtPrecio">
+                <div class="insidePrecio">$ {{formatText(Producto.Precio)}}</div>
+              </div>
+              <div class="btnCart">
+                <div class="alignbtnCart">
+                  <ion-button expand="block" color="#709971" class="addCart" (click)="agregaraCarrito()">agregar</ion-button>
+                </div>
+              </div>
+      </div>
+
+</div>
+</ion-content>
