@@ -13,7 +13,7 @@ export function myEnterAnimation(AnimationC: Animation, baseEl: HTMLElement): Pr
     wrapperAnimation.beforeStyles({ 'opacity': 1, 'border-radius': '15px' })
         .fromTo('translateY', '100%', '55%');
 
-    backdropAnimation.fromTo('opacity', 0.01, 0.4);
+    backdropAnimation.fromTo('opacity', 0.01, 0.4); 
 
     return Promise.resolve(baseAnimation
         .addElement(baseEl)
