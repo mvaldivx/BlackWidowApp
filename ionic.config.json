@@ -1,0 +1,7 @@
+{
+  "name": "Blackwidow",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
