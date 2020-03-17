@@ -41,6 +41,7 @@ color:string= ''
     var prod = this.NavParams.get('Producto')
     this.socket.on('colorDisp'+prod.IdProducto,colores =>{
       this.getInfoProducto(prod.IdProducto)
+      console.log('socketcolor', colores);
     })
 
   }
@@ -63,9 +64,6 @@ color:string= ''
             Colores.push({Color:c.Color})
         })
       })
-      if(Colores.length === 1){
-        this.color = Colores[0].Color
-      }
       r['Colores'] = Colores
       this.Tallas = r['Tallas'].filter(function (ta) {
         return ta.Talla

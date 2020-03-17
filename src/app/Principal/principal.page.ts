@@ -4,7 +4,7 @@ import { ProductosService } from '../api/Productos/productos.service';
 import { ModalController } from '@ionic/angular';
 import { ModalAddCartPage } from '../Componentes/modal-add-cart/modal-add-cart.page'
 import { UtilsService } from '../Utils/utils.service'
-import { myEnterAnimation, myLeaveAnimation } from '../Transitions/Transition'
+import { myEnterAnimation, myLeaveAnimation } from '../Transitions/ModalAnimations'
 
 @Component({
   selector: 'app-principal',
