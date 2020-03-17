@@ -1,9 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content></ion-content>
+<ion-content>
+  <div class="articulos">
+    <ion-card class="producto" *ngFor="let p of productos">
+      {{p.idProducto}}
+    </ion-card>
+  </div>
+</ion-content>

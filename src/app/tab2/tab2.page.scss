@@ -1,1 +1,18 @@
+.btnClose{
+    margin-right: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-top: 10px;
+}
 
+.articulos{
+    margin-top: 20px;
+    .producto{
+        width: 95%;
+        height: 25%;
+        max-height: 205px;
+        min-height: 110px;
+        display:inline-block;
+        font-family: Quicksand;
+    }
+}

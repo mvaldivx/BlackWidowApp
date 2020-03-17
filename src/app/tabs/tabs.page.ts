@@ -21,8 +21,10 @@ export class TabsPage {
         this.carritoServ.changeCarrito(prod)
       }
       this.carritoServ.carrito$.subscribe(prod=>{
-        if(prod){
+        if(prod && prod.productos[0].Nombre != 'default'){
           this.numproductos = prod.productos.length
+        }else{
+          this.numproductos = 0
         }
       })
     })
